@@ -1,0 +1,8 @@
+name: "Tim Radtke"
+page.title: "Tim Radtke"
+markdown: kramdown
+highlighter: rouge
+safe: true
+lsi: false
+permalink: /blog/:title/
+url: https://timradtke.github.io
