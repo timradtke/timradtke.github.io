@@ -87,11 +87,11 @@ img {
 .site {
   font-size: 115%;
   text-align: justify;
-  /*width: 42em;*/
-  max-width: 600px;
+  width: 42em;
+  /*max-width: 600px;*/
   margin: 3em auto 2em;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 1.5em;
+  padding-right: 2em;
   line-height: 1.5em;
 }
 
