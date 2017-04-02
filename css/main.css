@@ -17,7 +17,24 @@ body {
   font: 13.34px Helvetica, Arial, sans-serif;
   font-size: small;
   text-align: center;
+  /*max-width: 500px;*/
+  margin: 0 auto;
 }
+
+           /* body {
+                margin: 0;
+                background: #ffffff;
+                  font: 13.34px Helvetica, Arial, sans-serif;
+  font-size: small;
+  text-align: center;
+            }
+            
+            div#wrapper {
+				max-width: 500px;
+				margin: 0 auto;
+                padding: 0 1em;
+				padding-top: 2em;
+			}*/
 
 h1, h2, h3, h4, h5, h6 {
   font-size: 100%; }
@@ -31,6 +48,14 @@ a:visited { color: #a0a; }
 
 img {
 	max-width: 100%;
+}
+
+::selection {
+	background: #ccc;
+}
+                
+::-moz-selection {
+	background: #ccc;
 }
 
 /*****************************************************************************/
@@ -62,9 +87,11 @@ img {
 .site {
   font-size: 115%;
   text-align: justify;
-  width: 42em;
+  /*width: 42em;*/
+  max-width: 600px;
   margin: 3em auto 2em;
-  padding-left: 1em;
+  padding-left: 3em;
+  padding-right: 3em;
   line-height: 1.5em;
 }
 
@@ -78,6 +105,10 @@ img {
   margin-bottom: 0em;
 }
 
+h1.title { 
+	font-size: 20px;
+	}
+
 .title a {
   color: #000 /*#a00 #F14410*/;
 }
@@ -89,6 +120,7 @@ img {
 .header a.extra {
   color: #aaa;
   margin-left: 1em;
+  font-size: 1.2em;
 }
 
 .header a.extra:hover {
@@ -97,8 +129,8 @@ img {
 
 .header p.subtitle {
   margin-top: 0.3em;
-  margin-bottom: 2em;
-  font-size: 13px;
+  margin-bottom: 2.5em;
+  font-size: 0.9em;
   font-weight: bold;
   color: #F14410;
 }

@@ -31,7 +31,9 @@ optimHyperpars <- function(m,l,u, prob = 0.95, maxESS = 300, maxAlpha = 100) {
   
   optimalParameters <- parameterSet[which.min(parameterSet$deviation),1:2]
   optimalDeviation <- min(parameterSet$deviation)
-  uniqueMinimum <- min(parameterSet$deviation[-which.min(parameterSet$deviation)]) != optimalDeviation
+  uniqueMinimum <- min(
+    parameterSet$deviation[-which.min(parameterSet$deviation)]) != 
+    optimalDeviation
   
   if (!uniqueMinimum) message("The minimum is not unique.")
   

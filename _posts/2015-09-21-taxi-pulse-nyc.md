@@ -18,13 +18,19 @@ To do so, I access the TLC's data set through Google BigQuery. That way, I don't
 
 As last time, I don't download the data directly through the BigQuery web interface but use the `bigrquery` package to access BigQuery through R instead. Proceeding this way, I can directly store the data in a data frame and continue to work with it.
 
-    library(bigrquery)
-    project <- "nyc-taxi-data-1048"
-    taxiTimes <- "SELECT DATE(pickup_datetime) AS pickupDay, HOUR(pickup_datetime) AS pickupHour, COUNT(*) AS num_pickups FROM [nyc-tlc:yellow.trips_2015] WHERE (pickup_latitude BETWEEN 40.61 AND 40.91)  AND (pickup_longitude BETWEEN -74.06 AND -73.77) GROUP BY pickupDay, pickupHour ORDER BY pickupDay, pickupHour;"
+```
+library(bigrquery)
+project <- "nyc-taxi-data-1048"
+taxiTimes <- "SELECT DATE(pickup_datetime) AS pickupDay, HOUR(pickup_datetime) AS
+              pickupHour, COUNT(*) AS num_pickups FROM [nyc-tlc:yellow.trips_2015] 
+              WHERE (pickup_latitude BETWEEN 40.61 AND 40.91)  AND 
+              (pickup_longitude BETWEEN -74.06 AND -73.77) GROUP BY pickupDay,
+              pickupHour ORDER BY pickupDay, pickupHour;"
 
-    taxi_df <- query_exec(taxiTimes, project = project, max_pages = Inf)
-    dim(taxi_df) 
-    # 4344 3
+taxi_df <- query_exec(taxiTimes, project = project, max_pages = Inf)
+dim(taxi_df) 
+# 4344 3
+```
 
 The resulting data frame has three variables and 4344 observations (one observation for every hour during the months from January to June of 2015). 
 
