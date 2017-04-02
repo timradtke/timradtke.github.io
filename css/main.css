@@ -191,6 +191,11 @@ h1.title {
   border: 1px solid #ddd;
   background-color: #eef;
   padding: 0 .4em;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word; 
 }
 
 .post ul, .post ol {
@@ -205,6 +210,9 @@ h1.title {
 
 .post pre code {
   border: none;
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: justify;
 }
 
 /* terminal */
