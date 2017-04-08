@@ -5,4 +5,4 @@ highlighter: rouge
 safe: true
 lsi: false
 permalink: /blog/:title/
-url: https://timradtke.github.io
+url: http://minimizeregret.com
